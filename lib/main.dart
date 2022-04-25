@@ -1,6 +1,6 @@
-import 'package:exammonitorproject/homepage.dart';
-import 'package:exammonitorproject/lectorlogin.dart';
 import 'package:flutter/material.dart';
+
+import 'lectorlogin.dart';
 
 void main() {
   runApp(const MyApp());
