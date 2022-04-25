@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startup_namer/student.dart';
 
 import 'lectorlogin.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Examen Monitoring Tool',
       theme: ThemeData(primarySwatch: Colors.blue,
       ),
-      home: LectorLogin(),
+      home: StudentPage(),
     );
   }
 }
