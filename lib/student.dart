@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class StudentPage extends StatelessWidget {
@@ -34,9 +36,32 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'Studenten',
       style: optionStyle,
     ),
-    Text(
-      'Instellingen',
-      style: optionStyle,
+    SizedBox(
+      width: 200,
+      child: TextField(
+        decoration: InputDecoration(
+            labelText: 'Oud Wachtwoord',
+            border: OutlineInputBorder(),
+            focusColor: Color.fromARGB(99, 183, 0, 0)),
+      ),
+    ),
+    SizedBox(
+      width: 200,
+      child: TextField(
+        decoration: InputDecoration(
+          labelText: 'Nieuw Wachtwoord',
+          border: OutlineInputBorder(),
+        ),
+      ),
+    ),
+    SizedBox(
+      width: 200,
+      child: TextField(
+        decoration: InputDecoration(
+          labelText: 'Wachtwoord Herhalen',
+          border: OutlineInputBorder(),
+        ),
+      ),
     ),
   ];
 
@@ -50,14 +75,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("Examinator",
-              style: TextStyle(
-                  fontFamily: 'Open Sans', fontWeight: FontWeight.bold)),
-          backgroundColor: Colors.red[900],
-          centerTitle: true,
-          leading: Image.asset("../assets/AP_logo_letters_rgb.jpg"),
-          leadingWidth: 70,
-        ),
+        title: Text("Examinator",
+            style: TextStyle(
+                fontFamily: 'Open Sans', fontWeight: FontWeight.bold)),
+        backgroundColor: Colors.red[900],
+        centerTitle: true,
+        leading: Image.asset("../assets/AP_logo_letters_rgb.jpg"),
+        leadingWidth: 70,
+      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
