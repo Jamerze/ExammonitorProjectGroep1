@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startup_namer/lector.dart';
 
 class LectorLogin extends StatelessWidget {
   const LectorLogin({Key? key}) : super(key: key);
@@ -81,7 +82,11 @@ class LectorLogin extends StatelessWidget {
                             primary: Colors.red[900],
                             onPrimary: Colors.white,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(
+                              context
+                            );
+                          },
                           child: Text(
                             'Ga Terug',
                             style: TextStyle(
@@ -98,7 +103,13 @@ class LectorLogin extends StatelessWidget {
                             primary: Colors.red[900],
                             onPrimary: Colors.white,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LectorPage()),
+                            );
+                          },
                           child: Text(
                             'Login',
                             style: TextStyle(

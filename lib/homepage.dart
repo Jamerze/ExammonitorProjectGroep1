@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startup_namer/lectorlogin.dart';
 
 class Homepage extends StatelessWidget {
   @override
@@ -29,10 +30,18 @@ class Homepage extends StatelessWidget {
                               width: 300,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  primary: Color.fromARGB(255, 220, 97, 97), // background
+                                  primary: Color.fromARGB(
+                                      255, 220, 97, 97), // background
                                   onPrimary: Colors.white, // foreground
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LectorLogin()),
+                                  );
+                                },
                                 child: Text(
                                   'Lector',
                                   style: TextStyle(
